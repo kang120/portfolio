@@ -1,0 +1,50 @@
+.footer-container{
+    background: #f8f8f8;
+    padding: 60px;
+}
+
+.email{
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    letter-spacing: -2px;
+}
+
+@media only screen and (min-width: 0px){
+    .email{
+        font-size: 1.5rem;
+    }
+
+    .footer-container{
+        text-align: center;
+    }
+
+    .icons-row{
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 576px){
+    .email{
+        font-size: 3rem;
+    }
+
+    .footer-container{
+        text-align: left;
+    }
+
+    .icons-row{
+        justify-content: left;
+    }
+}
+
+.contact-icon{
+    margin-right: 30px;
+}
+
+.contact-link{
+    color: black;
+}
+
+.contact-link:hover{
+    color: black;
+}
