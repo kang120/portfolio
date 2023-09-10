@@ -13,9 +13,8 @@ import Resume from './components/Resume';
 function App() {
     return (
         <div className="App">
-            <div className='nav-container'>
-                <Navbar />
-            </div>
+            <Navbar />
+
             <div className='main'>
                 <Routes>
                     <Route path='/' element={<AboutMe />} />
