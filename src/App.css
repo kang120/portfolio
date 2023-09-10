@@ -58,16 +58,6 @@ body {
     padding: 50px;
 }
 
-@media screen and (max-width: 992px) {
-    .nav-container {
-        width: 100%;
-    }
-
-    .main {
-        margin-left: 0;
-    }
-}
-
 .ms-6 {
     margin-left: 70px;
 }
