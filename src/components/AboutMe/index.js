@@ -139,7 +139,7 @@ const AboutMe = () => {
 
     return (
         <div className='w-100'>
-            <div className='d-flex align-items-center top bg-light'>
+            <div className='d-flex align-items-center top bg-dark'>
                 <img src={profile} className='profile-pic' />
                 <div className='ms-6 d-flex flex-column align-items-start details'>
                     <h1 className='text-dark'><b>Lee Wei Kang</b></h1>
