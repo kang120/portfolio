@@ -1,0 +1,66 @@
+.responsive-flex-column {
+    flex-direction: column;
+}
+
+@media screen and (max-width: 992px) {
+    .responsive-flex-column {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-pic {
+        width: 25%;
+    }
+
+    .nav-container {
+        height: fit-content;
+    }
+
+    .xxx {
+        margin-left: 0;
+        padding-top: 170px;
+    }
+
+    .main {
+        margin-top: 40px;
+    }
+
+    .award-pic {
+        margin-top: 40px;
+    }
+
+    .clear-pad-x {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .exp-details {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .skill-row {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .exp-pic-lg {
+        width: 400px !important;
+        height: auto !important;
+    }
+
+    .award-pic {
+        width: 250px !important;
+        height: auto !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .exp2-details {
+        text-align: center;
+        margin-top: 30px;
+    }
+}
