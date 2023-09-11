@@ -17,7 +17,6 @@
 @media screen and (max-width: 992px) {
     .responsive-flex-column {
         display: flex;
-        flex-direction: row;
     }
 
     .nav-pic {
@@ -26,11 +25,7 @@
 
     .nav-container {
         height: fit-content;
-    }
-
-    .xxx {
-        margin-left: 0;
-        padding-top: 170px;
+        width: 100%;
     }
 
     .main {
@@ -44,10 +39,6 @@
     .clear-pad-x {
         padding-left: 0 !important;
         padding-right: 0 !important;
-    }
-
-    .nav-container {
-        width: 100%;
     }
 
     .main {
