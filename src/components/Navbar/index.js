@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <div className='nav-container'>
-            <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <nav className="navbar navbar-expand-lg" style={{ background: 'gray'}} data-bs-theme="dark">
                 <div className="container responsive-flex-column">
 
                     <a className="navbar-brand">Lee Wei Kang</a>

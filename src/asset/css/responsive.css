@@ -17,6 +17,7 @@
 @media screen and (max-width: 992px) {
     .responsive-flex-column {
         display: flex;
+        flex-direction: row;
     }
 
     .nav-pic {
