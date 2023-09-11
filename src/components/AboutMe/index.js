@@ -177,8 +177,8 @@ const AboutMe = () => {
                         <h3 className='text-dark'>Languages</h3>
                         <ul className='list-group mt-4'>
                             {
-                                languages.map(lan => (
-                                    <li className="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
+                                languages.map((lan, index) => (
+                                    <li key={index} className="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
                                         {lan['name']}
                                         <span className='badge bg-primary rounded-pill'>{lan['proficiency']}</span>
                                     </li>
@@ -191,8 +191,8 @@ const AboutMe = () => {
                         <h3 className='text-dark'>Hobbies</h3>
                         <div className='mt-4 row gy-3'>
                             {
-                                hobbies.map(hob => (
-                                    <div className="text-dark d-flex align-items-center">
+                                hobbies.map((hob, index) => (
+                                    <div key={index} className="text-dark d-flex align-items-center">
                                         <FontAwesomeIcon icon={hob['icon']} className='fa-2xl fa-fw' />
                                         <div className='ms-4'>{hob['name']}</div>
                                     </div>

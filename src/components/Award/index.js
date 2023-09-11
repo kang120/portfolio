@@ -25,9 +25,9 @@ const Award = () => {
                 <h3 className='text-dark'>Award</h3>
                 <div className='mt-4'>
                     {
-                        awards.map(award => (
+                        awards.map((award, index) => (
                             <>
-                                <div className="row mt-5 align-items-center p-5 clear-pad-x">
+                                <div key={index} className="row mt-5 align-items-center p-5 clear-pad-x">
                                     <div className='col-lg text-center'>
                                         <h3>{award['name']}</h3>
                                         <p className='mt-4'>{award['description']}</p>

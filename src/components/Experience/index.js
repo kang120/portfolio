@@ -51,8 +51,8 @@ const Experience = () => {
                 <h3 className='text-dark'>Experience</h3>
                 <div className='mt-4'>
                     {
-                        experiences.map(exp => (
-                            <div className="row gx-5 mt-5">
+                        experiences.map((exp, index) => (
+                            <div key={index} className="row gx-5 mt-5">
                                 <div className='col-lg-3 text-center'>
                                     <img src={require(`./experience_pic/${exp['experienceImg']}`)} className="exp-pic" />
                                 </div>
@@ -76,7 +76,7 @@ const Experience = () => {
                     {
                         otherExperiences.map((exp, index) => (
                             <>
-                                <div className="row p-5 align-items-center">
+                                <div key={index} className="row p-5 align-items-center clear-pad-x">
                                     <div className='col-lg text-center'>
                                         <img src={require(`./experience_pic/${exp['experienceImg']}`)} className="exp-pic-lg" />
                                     </div>
@@ -101,7 +101,7 @@ const ExperienceSkill = ({ skills, skillImg, skillPercent }) => {
         <div className='d-flex align-items-center skill-row mt-4'>
             {
                 skills.map((skill, index) => (
-                    <div className={`text-center ${index > 0 ? 'ms-4' : ''}`}>
+                    <div key={index} className={`text-center ${index > 0 ? 'ms-4' : ''}`}>
                         <img src={require(`./skill_pic/${skillImg[index]}`)} className='skill-icon' />
                         <p className='text-dark'><b><small>{skill}</small></b></p>
                     </div>
