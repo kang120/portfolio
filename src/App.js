@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import './asset/css/bootswatch_minty.css';
-import './asset/css/responsive.css'
 import Navbar from './components/Navbar';
 import { Routes, Route } from 'react-router';
 import AboutMe from './components/AboutMe';
