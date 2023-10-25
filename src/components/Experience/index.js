@@ -4,12 +4,19 @@ import './index.css'
 const Experience = () => {
     const experiences = [
         {
+            company: 'Tiong Nam Logistics Holdings Berhad',
+            position: 'Software Engineer',
+            period: 'Oct 2023 - Present',
+            skill: ['PHP', 'React', 'Angular', 'Nodejs'],
+            skillImg: ['php2.png', 'react2.png', 'angular2.png', 'nodejs2.png'],
+            experienceImg: 'tiongnam.png'
+        },
+        {
             company: 'Ounch Sdn Bhd',
             position: 'Software Engineer',
             period: 'Sep 2022 - May 2023',
             skill: ['JavaScript', 'React', 'Nodejs', '3D Modeling'],
             skillImg: ['javascript2.png', 'react2.png', 'nodejs2.png', '3d2.png'],
-            skillPercent: [100, 100, 100, 60],
             experienceImg: 'ounch.png'
         },
         {
@@ -18,7 +25,6 @@ const Experience = () => {
             period: 'May 2022 - Aug 2022',
             skill: ['JavaScript', 'React', 'Nodejs', 'GraphQL'],
             skillImg: ['javascript2.png', 'react2.png', 'nodejs2.png', 'graphql2.png'],
-            skillPercent: [100, 100, 100, 40],
             experienceImg: 'ounch.png'
         },
         {
@@ -27,7 +33,6 @@ const Experience = () => {
             period: 'Nov 2021 - Dec 2021',
             skill: ['PHP', 'CodeIgniter'],
             skillImg: ['php.png', 'codeigniter2.png'],
-            skillPercent: [100, 100],
             experienceImg: 'mmu.png'
         }
     ]
@@ -62,7 +67,7 @@ const Experience = () => {
                                     <h6>{exp['position']}</h6>
                                     <span>{exp['period']}</span>
 
-                                    <ExperienceSkill skills={exp['skill']} skillImg={exp['skillImg']} skillPercent={exp['skillPercent']} />
+                                    <ExperienceSkill skills={exp['skill']} skillImg={exp['skillImg']} />
                                 </div>
                             </div>
                         ))
@@ -96,7 +101,7 @@ const Experience = () => {
     )
 }
 
-const ExperienceSkill = ({ skills, skillImg, skillPercent }) => {
+const ExperienceSkill = ({ skills, skillImg }) => {
     return (
         <div className='d-flex align-items-center skill-row mt-4'>
             {
