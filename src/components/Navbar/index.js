@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import picture from '../../asset/img/me.jpeg';
+import picture from '../../asset/img/me5.png';
 import { useEffect, useState } from 'react';
 
 const Navbar = () => {

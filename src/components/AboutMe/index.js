@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import profile from '../../asset/img/me4.png'
+import profile from '../../asset/img/me6.png'
 import './index.css'
 import { faBasketball, faBowlingBall, faChess, faDesktop, faDumbbell } from '@fortawesome/free-solid-svg-icons';
 import Skill from './Skill';
