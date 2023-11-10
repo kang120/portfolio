@@ -5,7 +5,6 @@ import './asset/css/responsive.css'
 import Navbar from './components/Navbar';
 import { Routes, Route } from 'react-router';
 import AboutMe from './components/AboutMe';
-import Experience from './components/Experience';
 import NotFound from './NotFound';
 import Award from './components/Award';
 import Resume from './components/Resume';
@@ -19,7 +18,6 @@ function App() {
                 <Routes>
                     <Route path='/' element={<AboutMe />} />
                     <Route path='/about' element={<AboutMe />} />
-                    <Route path='/experience' element={<Experience />} />
                     <Route path='/award' element={<Award />} />
                     <Route path='/resume' element={<Resume />} />
                     <Route path='/*' element={<NotFound />} />

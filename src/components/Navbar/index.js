@@ -48,9 +48,6 @@ const Navbar = () => {
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className={`nav-link ${pathname == '/experience' ? 'active' : ''}`} href="experience">Experience</a>
-                            </li>
-                            <li className="nav-item">
                                 <a className={`nav-link ${pathname == '/award' ? 'active' : ''}`} href="award">Awards</a>
                             </li>
                             <li className="nav-item">

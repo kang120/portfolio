@@ -20,14 +20,14 @@ const SkillPicture = ({ picture }) => {
             <div className='d-flex'>
                 {
                     picture.map((pic, index) => (
-                        <img key={index} className='skill-icon me-1' src={require(`./skill_pic/${pic}`)} />
+                        <img key={index} className='skill-icon me-1' src={`./image/skill_pic/${pic}`} />
                     ))
                 }
             </div>
         )
     } else {
         return (
-            <img className='skill-icon' src={require(`./skill_pic/${picture}`)} />
+            <img className='skill-icon' src={`./image/skill_pic/${picture}`} />
         )
     }
 }

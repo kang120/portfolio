@@ -1,24 +1,29 @@
 const Education = ({ educations }) => {
     return (
-        <div className='row gx-4 gy-4 mt-4'>
-            {
-                educations.map((edu, index) => (
-                    <div key={index} className="col-md-4">
-                        <div className={`card border-${edu['tag']} bg-light text-dark h-100`} style={{ maxWidth: '20rem;' }}>
-                            <div className="card-header d-flex align-items-center education-card-header">
-                                <div><span className={`badge bg-${edu['tag']}`}>{edu['level']}</span></div>
-                                <div className="ms-3 education-school"><b>{edu['school']}</b></div>
-                            </div>
-                            <div className="card-body">
+        <div className="py-5 px-4 d-flex justify-content-center">
+            <div className="timeline timeline-right w-75">
+                {
+                    educations.map((edu, index) => (
+                        <div key={index} className="timeline-row pb-3 w-100">
+                            <div className="dot border-primary bg-primary"></div>
+                            <div className="v-line"></div>
+
+                            <div className="border rounded px-4 py-3 box-shadow timeline-container w-100">
+                                <div className="row">
+                                    <h6 className="col-sm text-primary fw-bold">{edu['period']}</h6>
+                                    <div className="col-sm text-end clear-text-align">
+                                        <span className={`badge rounded-pill text-bg-${edu['tag']}`}>{edu['level']}</span>
+                                    </div>
+                                </div>
+                                <h6 className="mt-3 education-school fw-bold">{edu['school']}</h6>
+                                <p>{edu['location']}</p>
                                 <h6 className="card-title">{edu['course']}</h6>
-                                <p className="card-text">{edu['location']}</p>
-                                <p className="card-text">{edu['period']}</p>
-                                <p className="card-text"><b>{edu['result']}</b></p>
+                                <h6 className="fw-bold mt-2">{edu['result']}</h6>
                             </div>
                         </div>
-                    </div>
-                ))
-            }
+                    ))
+                }
+            </div>
         </div>
     )
 }
