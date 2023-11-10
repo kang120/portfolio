@@ -44,7 +44,10 @@ const Navbar = () => {
                         <ul className="navbar-nav flex-column mt-5">
                             <li className="nav-item">
                                 <a className={`nav-link ${(pathname == '/about' || pathname == '/') ? 'active' : ''}`} href="about">About Me
-                                    <span className="visually-hidden">(current)</span>
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className={`nav-link ${(pathname == '/other_experience' || pathname == '/') ? 'active' : ''}`} href="other_experience">Other Experience
                                 </a>
                             </li>
                             <li className="nav-item">

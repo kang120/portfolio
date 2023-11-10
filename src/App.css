@@ -9,16 +9,19 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
 }
 
 #root {
     height: 100%;
+    max-width: 100%;
 }
 
 .App {
     height: 100%;
     width: 100%;
+    max-width: 100%;
 }
 
 .nav-container {

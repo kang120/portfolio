@@ -8,6 +8,7 @@ import AboutMe from './components/AboutMe';
 import NotFound from './NotFound';
 import Award from './components/Award';
 import Resume from './components/Resume';
+import OtherExperience from './components/OtherExperience';
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<AboutMe />} />
                     <Route path='/about' element={<AboutMe />} />
+                    <Route path='/other_experience' element={<OtherExperience />} />
                     <Route path='/award' element={<Award />} />
                     <Route path='/resume' element={<Resume />} />
                     <Route path='/*' element={<NotFound />} />

@@ -9,6 +9,7 @@ const Education = ({ educations }) => {
                             <div className="v-line"></div>
 
                             <div className="border rounded px-4 py-3 box-shadow timeline-container w-100">
+                                <div className='arrow border border-3'></div>
                                 <div className="row">
                                     <h6 className="col-sm text-primary fw-bold">{edu['period']}</h6>
                                     <div className="col-sm text-end clear-text-align">
