@@ -1,4 +1,8 @@
-.award-pic{
+.award-pic {
     width: 350px;
     height: auto;
+}
+
+.card {
+    width: fit-content;
 }

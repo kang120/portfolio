@@ -15,6 +15,14 @@
     position: relative;
 }
 
+.timeline-a {
+    text-decoration: none;
+}
+
+.timeline-a:hover .timeline-container {
+    background-color: #f6f6f6 !important;
+}
+
 .timeline-left .timeline-row {
     display: flex;
     justify-content: start;

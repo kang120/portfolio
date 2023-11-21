@@ -64,7 +64,8 @@ export const experiences = [
         description: [
             'Build web app to track the live truck location',
             'Implement new modern frontend UI'
-        ]
+        ],
+        url: 'https://www.tiongnam.com/'
     },
     {
         company: 'Ounch Sdn Bhd',
@@ -76,7 +77,8 @@ export const experiences = [
         description: [
             'Update functionality to fulfill latest client\'s need',
             'Render new 3D map given by client'
-        ]
+        ],
+        url: 'https://ounch.com/'
     },
     {
         company: 'Ounch Sdn Bhd',
@@ -89,7 +91,8 @@ export const experiences = [
             'R&D on new alternatives like GraphQL',
             'Analyze user behaviours on digital signage with machine learning',
             'Build a dashboard to visualize the analysis result'
-        ]
+        ],
+        url: 'https://ounch.com/'
     },
     {
         company: 'Multimedia University',
@@ -101,7 +104,8 @@ export const experiences = [
         description: [
             'Implement new modern UI',
             'Debugging and find new solution'
-        ]
+        ],
+        url: 'https://www.mmu.edu.my/'
     }
 ]
 
