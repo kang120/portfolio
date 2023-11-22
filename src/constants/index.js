@@ -35,6 +35,16 @@ export const skills = [
         name: 'ASP.NET',
         proficiency: 20,
         picture: 'csharp.png'
+    },
+    {
+        name: 'Git',
+        proficiency: 50,
+        picture: 'git.png'
+    },
+    {
+        name: 'MySQL, Oracle, MSSQL',
+        proficiency: [70, 20, 20],
+        picture: ['mysql.png', 'oracle.png', 'mssql.png']
     }
 ]
 
