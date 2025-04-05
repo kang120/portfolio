@@ -1,26 +1,22 @@
-const Education = ({ educations }) => {
-    return (
-        <div className="py-5 px-4 d-flex justify-content-center">
-            <div className="timeline timeline-right w-75">
-                {
-                    educations.map((edu, index) => (
-                        <div key={index} className="timeline-row pb-3 w-100">
-                            <div className="dot border-primary bg-primary"></div>
-                            <div className="v-line"></div>
+import { educations } from "../../constants";
 
-                            <div className="border rounded px-4 py-3 box-shadow timeline-container w-100">
-                                <div className='arrow border border-3'></div>
-                                <div className="row">
-                                    <h6 className="col-sm text-primary fw-bold">{edu['period']}</h6>
-                                    <div className="col-sm text-end clear-text-align">
-                                        <span className={`badge rounded-pill text-bg-${edu['tag']}`}>{edu['level']}</span>
-                                    </div>
-                                </div>
-                                <h6 className="mt-3 education-school fw-bold">{edu['school']}</h6>
-                                <p>{edu['location']}</p>
-                                <h6 className="card-title">{edu['course']}</h6>
-                                <h6 className="fw-bold mt-2">{edu['result']}</h6>
+const Education = () => {
+    return (
+        <div className="py-12">
+            <div className="text-center text-3xl font-bold underline">Educations</div>
+
+            <div className="grid grid-cols-3 mt-10 flex gap-3 flex-wrap">
+                {
+                    educations.map(el => (
+                        <div className='px-6 py-5 bg-gradient-to-r from-indigo-50 to-white rounded-xl border border-gray'>
+                            <div className="flex items-center">
+                                <div className="text-sm">{el.period}</div>
+                                <div className={`ms-auto px-3 py-1 text-xs rounded-xl font-semibold ${el.background} ${el.color}`}>{el.level}</div>
                             </div>
+                            <div className="mt-3 font-bold">{el.school}</div>
+                            <div className="text-sm italic">{el.location}</div>
+                            <div className="mt-3">{el.course}</div>
+                            <div className="mt-3 text-sm">{el.result}</div>
                         </div>
                     ))
                 }
