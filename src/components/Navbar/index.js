@@ -1,7 +1,6 @@
 import { useLocation } from 'react-router-dom';
-import picture from '../../asset/image/me5.png';
+import picture from '../../asset/img/me5.png';
 import { useEffect, useState } from 'react';
-import logo from "../../asset/image/logo.png"
 
 const Navbar = () => {
     const location = useLocation();
@@ -13,18 +12,54 @@ const Navbar = () => {
     }, [location])
 
     return (
-        <div className="w-full fixed top-0 left-0 bg-white z-50">
-            <div className='w-full 2xl:px-64 xl:px-36 lg:px-20 px-3 py-3'>
-                <div className='w-full flex items-center'>
-                    <img src={logo} className='h-6' />
+        <div className='nav-container'>
+            <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+                <div className="container-fluid responsive-flex-column">
 
-                    <div className="ms-auto flex items-center">
-                        <div>Home</div>
-                        <div className='ms-4'>Highlight</div>
-                        <div className='ms-16'>En</div>
+                    <a className="navbar-brand">Lee Wei Kang</a>
+
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div className="collapse navbar-collapse flex-column" id="collapse1">
+                        <img src={picture} className='nav-pic mt-3' />
+                        <p className='text-light mt-3'><small>Hi, I am Wei Kang, a people who enjoys programming and passionate in software development</small></p>
+
+                        <div className='d-flex align-items-center justify-content-center mt-3'>
+                            <a className="icon" href="https://www.linkedin.com/in/weikang120/" target="_blank">
+                                <i className="bi bi-linkedin"></i>
+                            </a>
+                            <a className="icon ms-3" href="https://github.com/kang120" target="_blank">
+                                <i className="bi bi-github"></i>
+                            </a>
+                            <a className="icon ms-3" href="mailto:<leeweikang1220@gmail.com>">
+                                <i className="bi bi-envelope-fill"></i>
+                            </a>
+                            <a className="icon ms-3" href="https://www.facebook.com/xiaokang120/" target="_blank">
+                                <i className="bi bi-facebook"></i>
+                            </a>
+                        </div>
+
+                        <ul className="navbar-nav flex-column mt-5">
+                            <li className="nav-item">
+                                <a className={`nav-link ${(pathname == '/about' || pathname == '/') ? 'active' : ''}`} href="about">About Me
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className={`nav-link ${(pathname == '/other_experience' || pathname == '/') ? 'active' : ''}`} href="other_experience">Other Experience
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className={`nav-link ${pathname == '/award' ? 'active' : ''}`} href="award">Awards</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className={`nav-link ${pathname == '/resume' ? 'active' : ''}`} href="resume">Resume</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
+            </nav>
         </div>
     )
 }

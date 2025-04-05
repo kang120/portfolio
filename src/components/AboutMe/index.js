@@ -1,68 +1,86 @@
-import './index.css'
-import background from '../../asset/image/background.png';
-import profile from "../../asset/image/profile.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import profile from '../../asset/img/me6.png'
+import './index.css'
+import Skill from './Skill';
+import Education from './Education';
+import Experience from './Experience';
+import { experiences, otherExperiences, educations, hobbies, languages, skills } from '../../constants';
 
 const AboutMe = () => {
-    const downloadPDF = () => {
-        const pdfPath = "/resume.pdf";
+    const age = new Date().getFullYear() - 2001;
+    const nationality = "Malaysia";
+    const email = "leeweikang1220@gmail.com";
 
-        const link = document.createElement("a");
-        link.href = pdfPath;
-        link.setAttribute("download", "LeeWeiKang.pdf");
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
 
     return (
-        <div className='w-full h-full relative flex items-end 2xl:px-64 xl:px-36 lg:px-20 overflow-x-hidden overflow-y-hidden'>
-            <div className='w-96 h-96 absolute -right-10 -top-40 bg-blue-50 lg:opacity-90 opacity-0 rounded-full'></div>
-            <div className='w-96 h-96 absolute right-28 -bottom-40 bg-blue-50 lg:opacity-90 opacity-0 rounded-full'></div>
+        <div className='w-100'>
+            <div className='d-flex align-items-center top bg-light box-shadow'>
+                <img src={profile} className='profile-pic' />
+                <div className='ms-6 d-flex flex-column align-items-start details'>
+                    <h1 className='text-dark'><b>Lee Wei Kang</b></h1>
+                    <table className='text-start'>
+                        <tr>
+                            <td className='text-dark pt-2'><b>Age: </b></td>
+                            <td className='ps-3 pt-2'>{age}</td>
+                        </tr>
+                        <tr>
+                            <td className='text-dark pt-2'><b>Nationality: </b></td>
+                            <td className='ps-3 pt-2'>{nationality}</td>
+                        </tr>
+                        <tr>
+                            <td className='text-dark pt-2'><b>Email: </b></td>
+                            <td className='ps-3 pt-2'>{email}</td>
+                        </tr>
+                    </table>
+                    <a id='resume-btn' className='btn btn-dark mt-4' href="/resume">View Resume</a>
+                </div>
+            </div>
 
-            <div className='w-full h-5/6 relative flex items-start'>
-                <div className='lg:w-1/2 w-full h-full lg:relative absolute lg:left-auto left-1/2 lg:translate-x-0 -translate-x-1/2 lg:block flex items-center justify-center'>
-                    <img src={profile} className='h-full relative lg:opacity-40 opacity-10 z-50' />
-
-                    <div className='w-96 h-96 absolute -left-32 -top-32 bg-blue-50 lg:opacity-90 opacity-0 rounded-full'></div>
-                    <div className='w-60 h-60 absolute -left-40 bottom-32 bg-blue-50 lg:opacity-90 opacity-0 rounded-full'></div>
-                    <div className='w-60 h-60 absolute left-1/2 -bottom-40 -translate-x-1/2 bg-blue-50 lg:opacity-90 opacity-0 rounded-full'></div>
+            <div className='pt-5'>
+                <div className='section text-start'>
+                    <h4 className='text-primary fw-bold text-center'>Skills</h4>
+                    <Skill skills={skills} />
                 </div>
 
-                <div className='lg:w-1/2 w-2/3 pt-24 lg:relative absolute lg:left-auto left-1/2 lg:translate-x-0 -translate-x-1/2 lg:text-left text-center'>
-                    <div className='text-6xl font-bold'>Hello !</div>
-                    <div className='mt-2 text-6xl font-bold'>I'm Wei Kang</div>
-                    <div className='mt-4 text-xl font-bold text-indigo-400'>Software Engineer | Full Stack Developer</div>
-                    <div className='mt-8'>
-                        My name is Wei Kang. I'm a software developer who enjoys developing something cool.
-                    </div>
+                <div className='section text-start'>
+                    <h4 className='text-primary fw-bold text-center'>Experiences</h4>
+                    <Experience experiences={experiences} otherExperiences={otherExperiences} />
+                </div>
 
-                    <div className='mt-16'>
-                        <button className='btn btn-md btn-blue-600' onClick={downloadPDF}>
-                            <FontAwesomeIcon icon={faDownload} className='me-3' />
-                            <span>Download Resume</span>
-                        </button>
-                    </div>
+                <div className='section text-start'>
+                    <h4 className='text-primary fw-bold text-center'>Educations</h4>
+                    <Education educations={educations} />
+                </div>
 
-                    <div className='mt-4'>
-                        <div className='flex items-center lg:justify-start justify-center'>
-                            <a href="https://github.com/kang120" target="_blank" className='border rounded-full border-gray p-2 hover:bg-gray-100'>
-                                <FontAwesomeIcon icon={faGithub} className='fa-xl' />
-                            </a>
 
-                            <a href="https://www.linkedin.com/in/weikang120/" target="_blank" className='border rounded-full border-gray p-2 ms-2 hover:bg-gray-100'>
-                                <FontAwesomeIcon icon={faLinkedinIn} className='fa-xl' />
-                            </a>
+                <div className='section'>
+                    <div className='row gx-5 gy-5 justify-content-between'>
+                        <div className='col-md-4 text-start md-text-center'>
+                            <h4 className='text-primary fw-bold'>Languages</h4>
+                            <ul className='list-group py-5'>
+                                {
+                                    languages.map((lan, index) => (
+                                        <li key={index} className="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
+                                            {lan['name']}
+                                            <span className='badge bg-primary rounded-pill'>{lan['proficiency']}</span>
+                                        </li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
 
-                            <a href="mailto:<leeweikang1220@gmail.com>" className='border rounded-full border-gray p-2 ms-2 hover:bg-gray-100'>
-                                <FontAwesomeIcon icon={faEnvelope} className='fa-xl' />
-                            </a>
-
-                            <a href="https://www.facebook.com/xiaokang120/" target="_blank" className='border rounded-full border-gray p-2 ms-2 hover:bg-gray-100'>
-                                <FontAwesomeIcon icon={faFacebook} className='fa-xl' />
-                            </a>
+                        <div className='col-md-6 text-start md-text-center d-flex flex-column md-align-items-center'>
+                            <h4 className='text-primary fw-bold'>Hobbies</h4>
+                            <div className='py-5 d-flex flex-column'>
+                                {
+                                    hobbies.map((hob, index) => (
+                                        <div key={index} className="py-1 text-dark d-flex align-items-center">
+                                            <FontAwesomeIcon icon={hob['icon']} className='fa-2xl fa-fw' />
+                                            <div className='ms-4'>{hob['name']}</div>
+                                        </div>
+                                    ))
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>

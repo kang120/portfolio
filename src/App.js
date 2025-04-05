@@ -1,22 +1,29 @@
+import logo from './logo.svg';
 import './App.css';
-import AboutMe from './components/AboutMe';
-import Education from './components/AboutMe/Education';
-import Experience from './components/AboutMe/Experience';
-import Skill from './components/AboutMe/Skill';
+import './asset/css/bootswatch_minty.css';
+import './asset/css/responsive.css'
 import Navbar from './components/Navbar';
+import { Routes, Route } from 'react-router';
+import AboutMe from './components/AboutMe';
+import NotFound from './NotFound';
+import Award from './components/Award';
+import Resume from './components/Resume';
+import OtherExperience from './components/OtherExperience';
 
 function App() {
     return (
-        <div className="App w-screen h-screen">
+        <div className="App">
             <Navbar />
 
-            <AboutMe />
-
-            <div className='w-full 2xl:px-64 xl:px-36 lg:px-20 px-5 bg-gradient-to-r from-sky-50'>
-                <Skill />
-
-                <Experience />
-                <Education />
+            <div className='main'>
+                <Routes>
+                    <Route path='/' element={<AboutMe />} />
+                    <Route path='/about' element={<AboutMe />} />
+                    <Route path='/other_experience' element={<OtherExperience />} />
+                    <Route path='/award' element={<Award />} />
+                    <Route path='/resume' element={<Resume />} />
+                    <Route path='/*' element={<NotFound />} />
+                </Routes>
             </div>
         </div>
     );

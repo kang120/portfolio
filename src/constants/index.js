@@ -1,260 +1,50 @@
 import { faBasketball, faBowlingBall, faChess, faDesktop, faDumbbell } from '@fortawesome/free-solid-svg-icons';
-import react from "../asset/image/skill_image/react.png"
-import angular from "../asset/image/skill_image/angular.png"
-import bootstrap from "../asset/image/skill_image/bootstrap.png"
-import tailwindcss from "../asset/image/skill_image/tailwindcss.png"
-import sass from "../asset/image/skill_image/sass.png"
-import html from "../asset/image/skill_image/html.png"
-import javascript from "../asset/image/skill_image/javascript.png"
-import css from "../asset/image/skill_image/css.png"
-import typescript from "../asset/image/skill_image/typescript.png"
-import netcore from "../asset/image/skill_image/net core.png"
-import nodejs from "../asset/image/skill_image/nodejs.png"
-import springboot from "../asset/image/skill_image/springboot.png"
-import mysql from "../asset/image/skill_image/mysql.png"
-import postgresql from "../asset/image/skill_image/postgresql.png"
-import git from "../asset/image/skill_image/git.png"
-import docker from "../asset/image/skill_image/docker.png"
-import aws from "../asset/image/skill_image/aws.png"
-import ubuntu from "../asset/image/skill_image/ubuntu.png"
-import terraform from "../asset/image/skill_image/terraform.png"
-import python from "../asset/image/skill_image/python.png"
-import jupyter from "../asset/image/skill_image/jupyter.png"
-import tensorflow from "../asset/image/skill_image/tensorflow.png"
-import openai from "../asset/image/skill_image/openai.svg"
-import vsc from "../asset/image/skill_image/vsc.png"
-import vs from "../asset/image/skill_image/vs.png"
-import postman from "../asset/image/skill_image/postman.jpg"
-import chatgpt from "../asset/image/skill_image/chatgpt.webp"
-import dbeaver from "../asset/image/skill_image/dbeaver.png"
-import sourcetree from "../asset/image/skill_image/sourcetree.png"
-import efs from "../asset/image/company_image/efs.png"
-import tiongnam from "../asset/image/company_image/tiongnam.png"
-import ounch from "../asset/image/company_image/ounch.png"
 
-export const frontendSkills = [
-    {
-        name: 'React',
-        picture: react
-    },
-    {
-        name: 'Angular',
-        picture: angular
-    },
-    {
-        name: 'HTML',
-        picture: html
-    },
-    {
-        name: 'CSS',
-        picture: css
-    },
-    {
-        name: 'JavaScript',
-        picture: javascript
-    },
-    {
-        name: 'TypeScript',
-        picture: typescript
-    },
-    {
-        name: 'Bootstrap',
-        picture: bootstrap
-    },
-    {
-        name: 'TailwindCSS',
-        picture: tailwindcss
-    },
-    {
-        name: 'SASS',
-        picture: sass
-    },
-]
-
-export const backendSkills = [
-    {
-        name: 'Net Core',
-        picture: netcore
-    },
+export const skills = [
     {
         name: 'Nodejs',
-        picture: nodejs
+        proficiency: 60,
+        picture: 'nodejs2.png'
     },
     {
-        name: 'Spring Boot',
-        picture: springboot
+        name: 'React, Angular, Vue',
+        proficiency: [80, 60, 20],
+        picture: ['react2.png', 'angular2.png', 'vue2.png']
     },
     {
-        name: 'MySQL',
-        picture: mysql
+        name: 'Bootstrap, Sass',
+        proficiency: [80, 60],
+        picture: ['bootstrap2.png', 'sass2.png']
     },
     {
-        name: 'PostgreSQL',
-        picture: postgresql
+        name: 'REST API, GraphQL',
+        proficiency: [70, 40],
+        picture: ['rest2.png', 'graphql2.png']
     },
-]
-
-export const devopsSkills = [
+    {
+        name: 'CodeIgniter',
+        proficiency: 60,
+        picture: ['codeigniter2.png']
+    },
+    {
+        name: 'Django, Flask',
+        proficiency: [30, 20],
+        picture: 'python2.png'
+    },
+    {
+        name: 'ASP.NET',
+        proficiency: 20,
+        picture: 'csharp.png'
+    },
     {
         name: 'Git',
-        picture: git
+        proficiency: 50,
+        picture: 'git.png'
     },
     {
-        name: 'Docker',
-        picture: docker
-    },
-    {
-        name: 'AWS',
-        picture: aws
-    },
-    {
-        name: 'Ubuntu',
-        picture: ubuntu
-    },
-    {
-        name: 'Terraform',
-        picture: terraform
-    },
-]
-
-export const machineLearningSkills = [
-    {
-        name: 'Python',
-        picture: python
-    },
-    {
-        name: 'Jupyter Notebook',
-        picture: jupyter
-    },
-    {
-        name: 'Tensorflow',
-        picture: tensorflow
-    },
-    {
-        name: 'Open AI',
-        picture: openai
-    },
-]
-
-export const toolSkills = [
-    {
-        name: 'Visual Studio Code',
-        picture: vsc
-    },
-    {
-        name: 'Visual Studio',
-        picture: vs
-    },
-    {
-        name: 'Postman',
-        picture: postman
-    },
-    {
-        name: 'Chatgpt',
-        picture: chatgpt
-    },
-    {
-        name: 'Dbeaver',
-        picture: dbeaver
-    },
-    {
-        name: 'Sourcetree',
-        picture: sourcetree
-    },
-]
-
-export const professionalExperiences = [
-    {
-        company: 'EF Software Pte Ltd',
-        location: 'Singapore',
-        position: 'Software Engineer',
-        period: 'Oct 2023 - Present',
-        skill: ['.Net Core', 'PostgreSQL', 'AWS', 'Docker'],
-        companyImage: efs,
-        keyExperience: [
-            'Contributed to the migration of web applications to a Software-as-a-Service (SaaS) model, enhancing the scalability and accessibility.',
-            'Participated in version control management and the deployment pipeline, ensuring smooth integration and release in cloud environments.'
-        ]
-    },
-    /*
-    {
-        company: 'Tiong Nam Logistics Holdings Berhad',
-        location: 'Johor, Malaysia',
-        position: 'Software Engineer',
-        period: 'Oct 2023 - March 2024',
-        skill: ['PHP', 'React', 'Angular', 'Nodejs'],
-        companyImage: tiongnam,
-        keyExperience: [
-            'Develop web application to optimize logistics management, saving 40% of time cost',
-            'Implement OCR solution to automate document data entry, reducing the cost of manpower'
-        ]
-    },
-    */
-    {
-        company: 'Ounch Sdn Bhd',
-        location: 'Kuala Lumpur, Malaysia',
-        position: 'Software Engineer',
-        period: 'Sep 2022 - May 2023',
-        skill: ['JavaScript', 'React', 'Nodejs', '3D Modelling'],
-        companyImage: ounch,
-        keyExperience: [
-            'Maintain and update software to meet the latest client requirements',
-            'Render new 3D maps as per client specifications'
-        ]
-    },
-    {
-        company: 'Ounch Sdn Bhd',
-        location: 'Kuala Lumpur, Malaysia',
-        position: 'Software Engineer Intern',
-        period: 'May 2022 - Aug 2022',
-        skill: ['JavaScript', 'React', 'Nodejs', 'GraphQL'],
-        companyImage: ounch,
-        keyExperience: [
-            'Analyze user behaviors on digital signage with machine learning and build a dashboard to visualize the analysis result'
-        ]
-    },
-]
-
-export const educations = [
-    {
-        school: 'Multimedia University',
-        level: "Bachelor's Degree",
-        course: 'Bachelor of Computer Science Hons Artificial Intelligence',
-        location: 'Malacca, Malaysia',
-        period: '2020 - 2023',
-        result: 'CGPA: 3.89',
-        background: 'bg-green-500',
-        color: 'text-white'
-    },
-    {
-        school: 'Multimedia University',
-        level: "Foundation",
-        course: 'Foundation in Information Technology',
-        location: 'Malacca, Malaysia',
-        period: '2019 - 2020',
-        result: 'CGPA: 3.91',
-        background: 'bg-red-500',
-        color: 'text-white'
-    },
-    {
-        school: 'SMK Taman Universiti',
-        level: "Secondary",
-        course: 'SPM',
-        location: 'Johor Bahru, Malaysia',
-        period: '2014 - 2018',
-        result: 'Result: 5A+ 5A',
-        background: 'bg-orange-500',
-        color: 'text-white',
-    },
-    {
-        school: 'SJK(C) Pu Sze',
-        level: "Primary",
-        course: 'UPSR',
-        location: 'Johor Bahru, Malaysia',
-        period: '2008 - 2013',
-        result: 'Result: 6A',
-        background: 'bg-blue-500',
-        color: 'text-white',
+        name: 'MySQL, Oracle, MSSQL',
+        proficiency: [70, 20, 20],
+        picture: ['mysql.png', 'oracle.png', 'mssql.png']
     }
 ]
 
@@ -273,6 +63,61 @@ export const languages = [
     }
 ]
 
+export const experiences = [
+    {
+        company: 'Tiong Nam Logistics Holdings Berhad',
+        position: 'Software Engineer',
+        period: 'Oct 2023 - Present',
+        skill: ['PHP', 'React', 'Angular', 'Nodejs'],
+        skillImg: ['php2.png', 'react2.png', 'angular2.png', 'nodejs2.png'],
+        experienceImg: 'tiongnam.png',
+        description: [
+            'Build web app to track the live truck location',
+            'Implement new modern frontend UI'
+        ],
+        url: 'https://www.tiongnam.com/'
+    },
+    {
+        company: 'Ounch Sdn Bhd',
+        position: 'Software Engineer',
+        period: 'Sep 2022 - May 2023',
+        skill: ['JavaScript', 'React', 'Nodejs', '3D Modeling'],
+        skillImg: ['javascript2.png', 'react2.png', 'nodejs2.png', '3d2.png'],
+        experienceImg: 'ounch.png',
+        description: [
+            'Update functionality to fulfill latest client\'s need',
+            'Render new 3D map given by client'
+        ],
+        url: 'https://ounch.com/'
+    },
+    {
+        company: 'Ounch Sdn Bhd',
+        position: 'Software Engineer Intern',
+        period: 'May 2022 - Aug 2022',
+        skill: ['JavaScript', 'React', 'Nodejs', 'GraphQL'],
+        skillImg: ['javascript2.png', 'react2.png', 'nodejs2.png', 'graphql2.png'],
+        experienceImg: 'ounch.png',
+        description: [
+            'R&D on new alternatives like GraphQL',
+            'Analyze user behaviours on digital signage with machine learning',
+            'Build a dashboard to visualize the analysis result'
+        ],
+        url: 'https://ounch.com/'
+    },
+    {
+        company: 'Multimedia University',
+        position: 'Research Assistant',
+        period: 'Nov 2021 - Dec 2021',
+        skill: ['PHP', 'CodeIgniter'],
+        skillImg: ['php.png', 'codeigniter2.png'],
+        experienceImg: 'mmu.png',
+        description: [
+            'Implement new modern UI',
+            'Debugging and find new solution'
+        ],
+        url: 'https://www.mmu.edu.my/'
+    }
+]
 
 export const otherExperiences = [
     {
@@ -284,6 +129,45 @@ export const otherExperiences = [
         company: 'De Largo',
         position: 'Bartender',
         experienceImg: 'delargo.png'
+    }
+]
+
+export const educations = [
+    {
+        school: 'Multimedia University',
+        level: "Bachelor's Degree",
+        tag: 'primary',
+        course: 'Bachelor of Computer Science Hons Artificial Intelligence',
+        location: 'Malacca, Malaysia',
+        period: '2020 - 2023',
+        result: 'CGPA: 3.89'
+    },
+    {
+        school: 'Multimedia University',
+        level: "Foundation",
+        tag: 'secondary',
+        course: 'Foundation in Information Technology',
+        location: 'Malacca, Malaysia',
+        period: '2019 - 2020',
+        result: 'CGPA: 3.91'
+    },
+    {
+        school: 'SMK Taman Universiti',
+        level: "Secondary",
+        tag: 'danger',
+        course: 'SPM',
+        location: 'Johor Bahru, Malaysia',
+        period: '2014 - 2018',
+        result: 'Result: 5A+ 5A'
+    },
+    {
+        school: 'SJK(C) Pu Sze',
+        level: "Primary",
+        tag: 'info',
+        course: 'UPSR',
+        location: 'Johor Bahru, Malaysia',
+        period: '2008 - 2013',
+        result: 'Result: 6A'
     }
 ]
 
