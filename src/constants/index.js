@@ -65,12 +65,12 @@ export const languages = [
 
 export const experiences = [
     {
-        company: 'Tiong Nam Logistics Holdings Berhad',
+        company: 'EF Software Pte Ltd',
         position: 'Software Engineer',
         period: 'Oct 2023 - Present',
-        skill: ['PHP', 'React', 'Angular', 'Nodejs'],
+        skill: ['Net Core', 'PostgreSQL', 'AI Models'],
         skillImg: ['php2.png', 'react2.png', 'angular2.png', 'nodejs2.png'],
-        experienceImg: 'tiongnam.png',
+        experienceImg: 'efs.png',
         description: [
             'Build web app to track the live truck location',
             'Implement new modern frontend UI'

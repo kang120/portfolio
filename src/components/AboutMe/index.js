@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import profile from '../../asset/img/me6.png'
+import profile from '../../asset/img/me7.jpeg'
 import './index.css'
 import Skill from './Skill';
 import Education from './Education';
