@@ -1,7 +1,23 @@
 import './index.css'
-import { awards } from '../../constants';
 
 const Award = () => {
+    const awards = [
+        {
+            name: 'Top Sales Award',
+            awardImg: 'topsales.jpg',
+            description: 'The award presented for the first closing as rookie agent'
+        },
+        {
+            name: 'Huawei Certification - AI',
+            awardImg: 'huawei.png',
+            description: 'The certification presented for the successful completion of the Huawei AI exam'
+        },
+        {
+            name: 'Chess Team L18 MSSD - Champion',
+            awardImg: 'johan.jpg',
+            description: 'The award presented as the champion team in Chess MSSD Johor Bahru'
+        }
+    ]
 
     return (
         <div>
